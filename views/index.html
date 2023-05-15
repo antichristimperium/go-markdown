@@ -1,0 +1,35 @@
+{% include "partials/header.html" %}
+<div class="page-body">
+    <div class="container-xl">
+        <div class="col">
+            <h2 class="page-title">
+                Golang and htmx
+            </h2>
+        </div>
+
+        <div class="card bg-primary-lt mt-4 mb-4">
+            <div class="card-body">
+                <h3 class="card-title">About go-markdown</h3>
+                <p class="text-muted">
+                    It is a test application, its purpose is to convert markdown text to html using htmx.
+                </p>
+            </div>
+        </div>
+
+        <div class="card card-lg">
+            <div class="card-body">
+                <div class="row g-4">
+                    <div class="col-md-6 markdown">
+                        <textarea class="form-control" rows="10" placeholder="Type markdown here" hx-post="/mark/"
+                            hx-target="#target" hx-trigger="keyup changed delay:100ms"
+                            name="markdown_source"></textarea>
+                    </div>
+
+                    <div class="col-md-6 markdown" id="target"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
